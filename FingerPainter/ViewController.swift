@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var canvas: UIImageView!
+    var start: CGPoint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,14 +24,20 @@ class ViewController: UIViewController {
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch = touches.first as! UITouch
-        let point = touch.locationInView(view)
-        // print message with breakpoint here
+        start = touch.locationInView(view)
     }
     
     override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch = touches.first as! UITouch
-        let point = touch.locationInView(view)
-        // print message with breakpoint here
+        let end = touch.locationInView(view)
+        if let start = self.start {
+            drawFromPoint(start, toPoint: end)
+        }
+        self.start = end
+    }
+    
+    func drawFromPoint(start: CGPoint, toPoint end: CGPoint) {
+        // print coordinate with breakpoint here
     }
 
 }
