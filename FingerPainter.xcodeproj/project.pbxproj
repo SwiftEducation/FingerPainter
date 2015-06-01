@@ -13,6 +13,7 @@
 		F9087F8D1B1C613700767FD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9087F8C1B1C613700767FD3 /* Images.xcassets */; };
 		F9087F901B1C613700767FD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9087F8E1B1C613700767FD3 /* LaunchScreen.xib */; };
 		F9087F9C1B1C613700767FD3 /* FingerPainterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9087F9B1B1C613700767FD3 /* FingerPainterTests.swift */; };
+		F9087FA61B1CA56700767FD3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9087FA51B1CA56700767FD3 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F9087F951B1C613700767FD3 /* FingerPainterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerPainterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9087F9A1B1C613700767FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9087F9B1B1C613700767FD3 /* FingerPainterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPainterTests.swift; sourceTree = "<group>"; };
+		F9087FA51B1CA56700767FD3 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				F9087F851B1C613700767FD3 /* AppDelegate.swift */,
 				F9087F871B1C613700767FD3 /* ViewController.swift */,
 				F9087F891B1C613700767FD3 /* Main.storyboard */,
+				F9087FA51B1CA56700767FD3 /* CanvasView.swift */,
 				F9087F8C1B1C613700767FD3 /* Images.xcassets */,
 				F9087F8E1B1C613700767FD3 /* LaunchScreen.xib */,
 				F9087F831B1C613700767FD3 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				F9087F881B1C613700767FD3 /* ViewController.swift in Sources */,
 				F9087F861B1C613700767FD3 /* AppDelegate.swift in Sources */,
+				F9087FA61B1CA56700767FD3 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
