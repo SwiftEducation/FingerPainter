@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.github.com/SwiftEducation/FingerPainter/master/FingerPainter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
+<img align="right" src="https://github.com/SwiftEducation/FingerPainter/raw/master/FingerPainter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
 # FingerPainter
 
 ### Level 3, Six Lessons
