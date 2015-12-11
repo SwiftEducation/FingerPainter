@@ -20,15 +20,17 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        let point = touch.locationInView(view)
-        // print message with breakpoint here
+        if let touch = touches.first {
+            let point = touch.locationInView(view)
+            // print message with breakpoint here
+        }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        let point = touch.locationInView(view)
-        // print message with breakpoint here
+        if let touch = touches.first {
+            let point = touch.locationInView(view)
+            // print message with breakpoint here
+        }
     }
 
 }
