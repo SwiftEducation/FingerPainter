@@ -23,17 +23,19 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        start = touch.locationInView(view)
+        if let touch = touches.first {
+            start = touch.locationInView(view)
+        }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        let end = touch.locationInView(view)
-        if let start = self.start {
-            drawFromPoint(start, toPoint: end)
+        if let touch = touches.first {
+            let end = touch.locationInView(view)
+            if let start = self.start {
+                drawFromPoint(start, toPoint: end)
+            }
+            self.start = end
         }
-        self.start = end
     }
     
     func drawFromPoint(start: CGPoint, toPoint end: CGPoint) {
