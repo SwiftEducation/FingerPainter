@@ -9,14 +9,14 @@ import UIKit
 
 class CanvasView : UIView {
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetStrokeColorWithColor(context, UIColor.magentaColor().CGColor)
-        CGContextSetLineWidth(context, 10)
-        CGContextBeginPath(context)
-        CGContextMoveToPoint(context, 0, 0)
-        CGContextAddLineToPoint(context, 150, 400)
-        CGContextStrokePath(context)
+        context?.setStrokeColor(UIColor.magenta.cgColor)
+        context?.setLineWidth(10)
+        context?.beginPath()
+        context?.move(to: CGPoint(x: 0, y: 0))
+        context?.addLine(to: CGPoint(x: 150, y: 400))
+        context?.strokePath()
     }
 
 }
