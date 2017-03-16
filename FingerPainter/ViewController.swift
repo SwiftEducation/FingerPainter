@@ -22,15 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            start = touch.locationInView(view)
+            start = touch.location(in: view)
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let end = touch.locationInView(view)
+            let end = touch.location(in: view)
             if let start = self.start {
                 drawFromPoint(start, toPoint: end)
             }
@@ -38,20 +38,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func drawFromPoint(start: CGPoint, toPoint end: CGPoint) {
+    func drawFromPoint(_ start: CGPoint, toPoint end: CGPoint) {
         // set the context to that of an image
         UIGraphicsBeginImageContext(canvas.frame.size)
         let context = UIGraphicsGetCurrentContext()
         // draw the existing image onto the current context
-        canvas.image?.drawInRect(CGRect(x: 0, y: 0,
+        canvas.image?.draw(in: CGRect(x: 0, y: 0,
             width: canvas.frame.size.width, height: canvas.frame.size.height))
         // draw the new line segment
-        CGContextSetLineWidth(context, 5)
-        CGContextSetStrokeColorWithColor(context, UIColor.magentaColor().CGColor)
-        CGContextBeginPath(context)
-        CGContextMoveToPoint(context, start.x, start.y)
-        CGContextAddLineToPoint(context, end.x, end.y)
-        CGContextStrokePath(context)
+        context?.setLineWidth(5)
+        context?.setStrokeColor(UIColor.magenta.cgColor)
+        context?.beginPath()
+        context?.move(to: CGPoint(x: start.x, y: start.y))
+        context?.addLine(to: CGPoint(x: end.x, y: end.y))
+        context?.strokePath()
         // obtain a UIImage object from the context
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
