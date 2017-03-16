@@ -1,4 +1,5 @@
 <img align="right" src="https://github.com/SwiftEducation/FingerPainter/raw/master/FingerPainter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
+
 # FingerPainter
 
 ### Level 3, Six Lessons
