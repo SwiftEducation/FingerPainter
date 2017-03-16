@@ -22,15 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            start = touch.locationInView(view)
+            start = touch.location(in: view)
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let end = touch.locationInView(view)
+            let end = touch.location(in: view)
             if let start = self.start {
                 drawFromPoint(start, toPoint: end)
             }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func drawFromPoint(start: CGPoint, toPoint end: CGPoint) {
+    func drawFromPoint(_ start: CGPoint, toPoint end: CGPoint) {
         // print coordinate with breakpoint here
     }
 
