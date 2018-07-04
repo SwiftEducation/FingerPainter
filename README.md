@@ -1,5 +1,9 @@
 <img align="right" src="https://github.com/SwiftEducation/FingerPainter/raw/master/FingerPainter/Images.xcassets/AppIcon.appiconset/Icon-Spotlight-40@2x.png" />
 
+## Deprecation Warning
+
+The Swift Education materials are out of date, and are no longer maintained.
+
 # FingerPainter
 
 ### Level 3, Six Lessons
